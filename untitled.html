@@ -1,0 +1,14 @@
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script>
+  $(document).ready(function(){
+      $("button").click(function(){
+          $.get({
+            url: 'http://localhost:3000/products'
+          }).done(function(response) {
+            console.log('Data:', response.data);
+          });
+      });
+  });
+  </script>
+
+  <button>Send an HTTP POST request to a page and get the result back</button>
